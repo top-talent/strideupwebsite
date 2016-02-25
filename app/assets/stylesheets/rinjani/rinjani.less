@@ -689,6 +689,8 @@ span.navbar-trigger-close {
 }
 
 #mortage,
+#diversify,
+#future,
 #howitworks,
 #map{
   height: 100vh;
@@ -875,6 +877,152 @@ span.navbar-trigger-close {
     }
   }
 }
+
+//Investors
+#investors-intro {
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    
+    &:before {
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 100%;
+        background: rgba(64, 142, 218, 0.6);
+    }
+
+    @media(min-width:1280px) {
+        height: 100%;
+        padding: 0px;
+    }
+    
+    .parallax {
+        width: 100%;
+        height: 100%;
+        
+        > .bcg {
+            display: table;
+            width: 100%;
+            height: 100%;
+            background-image: image-url("img/bg-portfolio.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            
+            @media(min-width:1280px) {
+                background-attachment: fixed;
+            }
+        }
+    }
+
+    .intro-body {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        
+        @media(min-width:1280px) {
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            > h1 {
+                display: block;
+                width: 110px;
+                height: 110px;
+                line-height: 110px;
+                color: rgba(255, 255, 255, 0.8);
+                font-family: 'Raleway', sans-serif;
+                font-size: 80px;
+                font-weight: 700;
+                text-align: center;
+                border: 2px solid rgba(255, 255, 255, 0.8);
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                margin: auto;
+            }
+        }
+        
+        .intro-text {
+            margin-top: 40px;
+            font-family: 'Raleway', sans-serif;
+            
+            h2 {
+                color: #fff;    
+                font-size: 50px;
+                font-weight: 700;
+                
+                @media(min-width:768px) {
+                    font-size: 55px;
+                }
+            }
+            
+            p.lead {
+                color: #fff;    
+                font-size: 22px;
+                font-weight: 400;
+                
+                @media(min-width:768px) {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .page-scroll {
+            margin-top: 30px;
+            
+            @media(min-width:768px) {
+                margin-top: 50px;
+            }
+            
+            a.btn {
+                font-family: 'Raleway', sans-serif;
+                
+                @media(min-width:768px) {
+                    padding: 20px 25px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+#besttenant {
+  .container,
+  .section-title{
+    color: #fff;
+  }
+  height: 100vh;
+  
+  .section-inner{
+    width: 100%;
+    height: 100%;
+    background-color: #207fDE;
+    @media(min-width:1280px) {
+      background-attachment: fixed;
+    }
+    > .section-overlay {
+      content: '';
+      position: absolute;
+      background-color: #5C59AE;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      top: 0px;
+      zoom: 1;
+      opacity: 0.0;
+      filter: alpha(opacity=0);
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+    }
+  }
+}
+
 /*---------------------------------------------------------------------*/
 /*  6. WHO WE ARE SECTION
 /*---------------------------------------------------------------------*/
