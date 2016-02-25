@@ -4,6 +4,7 @@ ruby "2.3.0"
 
 gem "autoprefixer-rails"
 gem "coffee-rails", "~> 4.1.0"
+gem 'font-awesome-less', '~> 4.5.0'
 gem "high_voltage"
 gem "jquery-rails"
 gem "pg"
