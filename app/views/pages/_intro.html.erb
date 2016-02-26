@@ -14,13 +14,13 @@
             </div>
             <!-- //.intro-text -->
 
-            <form class="form-inline">
+            <%= form_for(:subscribe, url: subscribe_url(), method: :post, remote: true, html: {class: "form-inline" }) do |f|%>
               <div class="form-group">
                 <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                <input type="email" class="form-control input-lg" size=40 placeholder="your@email.com">
+                <%= f.email_field :email, class: "form-control input-lg", size: 40, placeholder:"your@email.com" %>
               </div>
               <button type="submit" class="btn  btn-lg btn-default btn-rj">Get Priority Access</button>
-            </form>
+            <% end %>
             <div class="page-scroll">
             </div>
             <!-- //.page-scroll -->
