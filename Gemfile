@@ -12,6 +12,7 @@ gem "puma"
 gem "rack-canonical-host"
 gem "rails", "~> 4.2.0"
 gem 'less-rails', '~> 2.7.0'
+gem 'less-rails-bootstrap'
 gem "simple_form"
 gem 'therubyracer' # Ruby
 gem "title"
@@ -23,6 +24,7 @@ group :development do
   gem "spring"
   gem "spring-commands-rspec"
   gem "web-console"
+  gem 'guard-livereload', require: false
 end
 
 group :development, :test do

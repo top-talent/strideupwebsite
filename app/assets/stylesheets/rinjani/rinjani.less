@@ -265,10 +265,9 @@ p {
     }
 
     .navbar-brand {
-        color: #333;
-        font-size: 28px;
-        font-weight: 700;
-        text-transform: uppercase;
+        color: #666;
+        font-size: 30px;
+        font-weight: 300;
         height: 60px;
         line-height: 60px;
         padding-top: 0px;
@@ -287,10 +286,14 @@ p {
 
     .navbar-nav {
         > li {
+            > .navbar-btn{
+              color: white;
+              font-weight: 400;
+            }
             > a {
-                color: #333;
-                font-weight: 400;
-                text-transform: uppercase;
+                color: #666;
+                font-weight: 300;
+                font-size: 16px;
 
                 @media(min-width:992px) {
                     height: 60px;
@@ -627,7 +630,7 @@ span.navbar-trigger-close {
   .section-title{
     color: #fff;
   }
-  height: 100vh;
+  min-height: 100vh;
   
   .section-inner{
     width: 100%;
@@ -663,7 +666,7 @@ span.navbar-trigger-close {
   .section-title{
     color: #fff;
   }
-  height: 100vh;
+  min-height: 100vh;
   
   .section-inner{
     width: 100%;
@@ -693,14 +696,14 @@ span.navbar-trigger-close {
 #future,
 #howitworks,
 #map{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #choice {
   .container,
   .section-title{
   }
-  height: 100vh;
+  min-height: 100vh;
   
   .section-inner{
     width: 100%;
@@ -1565,12 +1568,12 @@ span.navbar-trigger-close {
 /*  16. FOOTER
 /*---------------------------------------------------------------------*/
 footer.footer {
-    color: #888;
+    color: #fff;
     background-color: #1c1c1c;
     border-top: 2px solid @base-color;
 
     a {
-        color: #c9c9c9;
+        color: #fff;
 
         &:hover {
              color: lighten(#c9c9c9, 50%);
@@ -1578,7 +1581,7 @@ footer.footer {
     }
 
     #footer {
-        background-color: #1c1c1c;
+        background-color: #4988c9;
         padding-top: 50px;
         padding-bottom: 20px;
 
@@ -1601,8 +1604,7 @@ footer.footer {
         }
 
         h4 {
-            color: #c9c9c9;
-            text-transform: uppercase;
+            color: #fff;
             margin-bottom: 20px;
             letter-spacing: 0.2em;
         }
