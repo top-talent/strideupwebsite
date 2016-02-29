@@ -29,13 +29,18 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
           <br />
-          <%= mail_to "", "Email", {class: "btn btn-lg btn-block btn-primary"} %> 
+          <%= mail_to "", "Email", {subject: "Have a look at StrideUp!",
+                                    body: "I just registered with StrideUp! They are building a new affordable way to do home finance - one 
+                                    that doesn’t involve any banks or mortgage brokers. Interested in buying a home or investing in 
+                                    property? You can register for free at [bit.ly/... ]",
+                                    class: "btn btn-lg btn-block btn-primary"} %> 
           <br/>
           <br />
-          <%= link_to "Facebook", "", {class: "btn btn-lg btn-block btn-primary"} %>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.strideup.com" title="Share on Facebook" target="_blank" class="btn btn-lg btn-block btn-primary"><i class="fa fa-facebook"></i>  Facebook</a>
           <br/>
           <br />
-          <%= link_to "Twitter", "Email", {class: "btn  btn-lg btn-block btn-primary"} %>
+          <a href="http://twitter.com/home?status=TEXTETX" title="Share on Twitter" target="_blank" class="btn btn-lg btn-block btn-primary"><i class="fa fa-twitter"></i>  Twitter</a>
+
         <% end %>
       </div>
       <!-- //.section-title -->
