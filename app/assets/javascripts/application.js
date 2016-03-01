@@ -36,4 +36,14 @@
 //= require rinjani/component/testimonials.js
 //= require rinjani/component/animation.js
 
+$(document).ready(function(){
+  $("a.fb-share").on("click", function(e){
+    e.preventDefault();
+    FB.ui({
+      method: 'share',
+      href: 'https://www.strideup.com',
+    }, function(response){});
+  });
+});
+
 

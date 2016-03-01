@@ -36,10 +36,12 @@
                                     class: "btn btn-lg btn-block btn-primary"} %> 
           <br/>
           <br />
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.strideup.com" title="Share on Facebook" target="_blank" class="btn btn-lg btn-block btn-primary"><i class="fa fa-facebook"></i>  Facebook</a>
+          <a href="" class="btn btn-lg btn-block btn-primary fb-share"><i class="fa fa-facebook"></i>  Facebook</a>
           <br/>
           <br />
-          <a href="http://twitter.com/home?status=TEXTETX" title="Share on Twitter" target="_blank" class="btn btn-lg btn-block btn-primary"><i class="fa fa-twitter"></i>  Twitter</a>
+          <%= link_to @twitter_share_url, title: "Share on Twitter", target: "_blank", class: "btn btn-lg btn-block btn-primary" do %>
+            <i class="fa fa-twitter"></i>  Twitter
+          <% end %>
 
         <% end %>
       </div>
@@ -73,13 +75,19 @@
             </div>
             <br/>
             <br/>
+            <% if params[:subscribe] and params[:subscribe][:email] %>
+              <%= f.hidden_field :email, value: params[:subscribe][:email] %>
+            <% else %>
+              <div class="form-group">
+                <%= f.email_field :email, class: "form-control input-lg", size: 40, placeholder:"your@email.com" %>
+              </div>
+            <% end %>
             <div class="form-group">
               <%= f.text_field :fullname, class: "form-control input-lg", size: 40, placeholder:"Your full name" %>
             </div>
             <div class="form-group">
               <%= f.text_field :postcode, class: "form-control input-lg", size: 40, placeholder:"Postcode" %>
             </div>
-            <%= f.hidden_field :email, value: params[:subscribe][:email] %>
             <br/>
             <button type="submit" class="btn btn-block btn-lg btn-default btn-rj">Join the waitlist</button>
           <% end %>
