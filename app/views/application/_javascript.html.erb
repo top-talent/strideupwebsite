@@ -1,0 +1,48 @@
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '437182033146666',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<%= javascript_include_tag :application %>
+
+<%= yield :javascript %>
+
+<%= render "analytics" %>
+
+<script type="text/javascript">
+  $(function(){
+    $(window).load(function(){
+      var ua = navigator.userAgent.toLowerCase(),
+      isAndroid = ua.indexOf("android") > -1;
+
+      if (jQuery.browser.mobile === false && !isAndroid){
+        // This is for Parallax using Skrollr
+        var s = skrollr.init({
+          forceHeight: false
+        });
+
+        // Refresh Skrollr after resizing our sections
+        s.refresh($('.parallax'));
+      }
+    });
+  });
+</script>
+
+<% if Rails.env.test? %>
+  <%= javascript_tag do %>
+    $.fx.off = true;
+    $.ajaxSetup({ async: false });
+  <% end %>
+<% end %>

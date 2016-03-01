@@ -1,0 +1,41 @@
+<!-- Begin Intro Section -->
+<section id="intro">
+<div id="parallax-1" class="parallax">
+  <div class="bcg skrollable skrollable-between" data-anchor-target="#parallax-1" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;">
+    <div class="intro-body text-left">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 intro-content">
+
+            <div class="intro-text text-left">
+              <h2>Making Housing More Affordable</h2>
+
+              <p class="lead">Stop saving for a mortgage, start buying your house</p>
+            </div>
+            <!-- //.intro-text -->
+
+            <%= form_for(:subscribe, url: contact_us_url(), method: :get, html: {class: "form-inline" }) do |f|%>
+              <div class="form-group">
+                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                <%= f.email_field :email, class: "form-control input-lg", size: 40, placeholder:"your@email.com" %>
+              </div>
+              <button type="submit" class="btn  btn-lg btn-default btn-rj">Get Priority Access</button>
+            <% end %>
+            <div class="page-scroll">
+            </div>
+            <!-- //.page-scroll -->
+          </div>
+          <!-- //.intro-content -->
+        </div>
+        <!-- //.row -->
+      </div>
+      <!-- //.container -->
+    </div>
+    <!-- //.intro-body -->
+  </div>
+  <!-- //.bcg -->
+</div>
+<!-- //.parallax -->
+</section>
+<!-- //End Intro Section -->
+
