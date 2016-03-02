@@ -8,7 +8,7 @@ gem 'font-awesome-less', '~> 4.5.0'
 gem 'gibbon'
 gem "high_voltage"
 gem "jquery-rails"
-gem "pg"
+#gem "pg"
 gem "puma"
 gem "rack-canonical-host"
 gem "rails", "~> 4.2.0"
