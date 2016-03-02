@@ -30,6 +30,65 @@
   }
 }
 
+#animated-house{
+  height: 300px;
+  .layer{
+    height: 10%;
+    float: none;
+    margin: 0 auto;
+    .inner-layer{
+      transition: height 1.3s ease;
+      .border-radius (50px);
+      width: 100%;
+      height: 100%;
+      background: white;
+    }
+    .inner-layer.animated{
+      height: 60%
+    }
+  }
+
+  #layer1{ width: 5% }
+  #layer2{ width: 15% }
+  #layer3{ width: 25% }
+  #layer4{ width: 35% }
+  #layer5{ width: 45% }
+  #layer6{ width: 65% }
+  #layer7{ width: 45% }
+  #layer8{ width: 45% }
+  #layer9{ width: 45% }
+  #layer10{ width: 45% }
+
+  #red-box{
+    width: 100%;
+    height: 77%;
+    border: 2px dotted red;
+    float: right;
+    .border-radius (25px);
+    transition: height 5s ease;
+    transition-delay: 1.5s;
+  }
+  
+  #white-box{
+    width: 100%;
+    height: 25%;
+    border: 2px dotted white;
+    float: right;
+    .border-radius (25px);
+    bottom: 0px;
+    transition: height 5s ease;
+    transition-delay: 1.5s;
+  }
+  #red-box.animated{
+    height: 5%;
+  }
+  
+  #white-box.animated{
+    height: 100%;
+  }
+
+}
+
 
 .border-radius (@radius: 5px) {
   -webkit-border-radius: @radius;

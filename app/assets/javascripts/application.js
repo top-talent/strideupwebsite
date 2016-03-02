@@ -59,6 +59,14 @@ $(document).ready(function(){
     }, 500);
   }
 
+  if($("#animated-house").length){
+    $('#animated-house').on('inview', function(event, isInView) {
+      if (isInView) {
+        $("#white-box, #red-box, .layer .inner-layer").addClass("animated")
+      }
+    });
+  }
+
   if($("#map").length){
 
     //Render UK map
