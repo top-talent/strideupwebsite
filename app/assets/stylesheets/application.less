@@ -6,3 +6,37 @@
 
 @import "rinjani/component/component";
 @import "rinjani/rinjani";
+
+
+#animated-bars{
+  height: 50vh;
+  .bars {
+    height: 100%;
+    div{
+      background-color: rgba(255,255,255, 0.5);
+      .border-radius (25px);
+      transition: background-color 0.7s ease;
+    }
+    div.active-bar{
+      background-color: white;   
+    }
+  }
+}
+
+
+#buyers-intro{
+  .fa-chevron-down{
+    color: rgba(255,255,255, 0.5);
+  }
+}
+
+
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}

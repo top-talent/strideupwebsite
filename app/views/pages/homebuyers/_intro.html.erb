@@ -11,11 +11,22 @@
               <h2>Housing Made Affordable</h2>
 
               <p class="lead">At StrideUp we don’t want you to have to compromise on your home.</p>
-              <p>CHART</p>
+              <div id="animated-bars" class="row" data-currentbar="1">
+                <div  class="col-md-1" >
+                </div>
+                <% 10.times.each  do |i| %>
+                  <div  class="bars col-md-1" >
+                    <div style="height: <%= (i+1)*10%>%" id="bar<%= i+1%>"></div>
+                  </div>
+                <% end %>
+              </div>
             </div>
             <!-- //.intro-text -->
 
             <div class="page-scroll">
+              <a href="#map" >
+                <i class="fa fa-chevron-down fa-3x"></i>
+              </a>
             </div>
             <!-- //.page-scroll -->
           </div>
